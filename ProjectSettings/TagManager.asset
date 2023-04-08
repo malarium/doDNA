@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - TeaPot
+  - Fridge
+  - Cup
+  - KitchenText
+  - HiddenCup
+  - NPC
+  - EnemyGoalArea
+  - WrongObject
+  - text1
+  - bottleGreen
+  - pot2
+  - text2
+  - PlocekKey
+  - PlayerGoalArea
+  - text3
+  - toiletpaper
+  - toiletDoor
+  - Cat
+  - Results
+  - FoosballCanva
+  - ball
+  - Chocolate
+  - Cleaner
+  - Kamila
+  - shoes
+  - ItemBox
+  - ItemBoxWrapper
+  - glasses
+  - shoes2
+  - turtle
+  - flowerpot
+  - flowerpot2
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Hero
+  - Background
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 4152983133
+    locked: 0
+  - name: Objects
+    uniqueID: 3122258139
+    locked: 0
+  - name: Hero
+    uniqueID: 3161723645
+    locked: 0
+  - name: CoversHero
+    uniqueID: 2467975287
+    locked: 0
