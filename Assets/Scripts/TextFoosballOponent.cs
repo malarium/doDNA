@@ -23,6 +23,7 @@ public class TextFoosballOponent : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            GlobalVariables.heroCanMove = false;
             if (best == 0)
             {
                 textObject.GetComponent<TextMesh>().text = NPCtextFirstGame;

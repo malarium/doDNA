@@ -17,6 +17,7 @@ public class HeroMovement : MonoBehaviour
     {
         GlobalVariables.currentItem = "";
         GlobalVariables.takenItem = "";
+        GlobalVariables.heroCanMove = true;
         heroRigidBody = GetComponent<Rigidbody2D>();
         heroAnimator = GetComponent<Animator>();
         takenItemBox = GameObject.FindGameObjectWithTag("ItemBox");
@@ -45,6 +46,7 @@ public class HeroMovement : MonoBehaviour
     }
     void OnMove(InputValue value)
     {
+        if (!GlobalVariables.heroCanMove) { return; }
         moveInput = value.Get<Vector2>();
         Vector2 playerValocity = new Vector2(moveInput.x * velocityMultiplier, moveInput.y * velocityMultiplier);
         heroRigidBody.velocity = playerValocity;

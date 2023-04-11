@@ -30,7 +30,9 @@ public class KamilaTalking : MonoBehaviour
             }
             else
             {
+                GlobalVariables.heroCanMove = false;
                 textObject.GetComponent<TextMesh>().text = allDone;
+                StartCoroutine(FadeHero(other.gameObject));
             }
             textObject.gameObject.SetActive(true);
         }
@@ -40,6 +42,19 @@ public class KamilaTalking : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             textObject.gameObject.SetActive(false);
+        }
+    }
+
+
+    IEnumerator FadeHero(GameObject hero)
+    {
+        Renderer renderer = hero.GetComponent<Renderer>();
+        Color c = renderer.material.color;
+        for (float alpha = 1f; alpha >= 0; alpha -= 0.1f)
+        {
+            c.a = alpha;
+            renderer.material.color = c;
+            yield return new WaitForSeconds(.25f);
         }
     }
 }

@@ -58,6 +58,7 @@ public class WizardLogicScript : MonoBehaviour
 
     void showFirstText()
     {
+        GlobalVariables.heroCanMove = false;
         textObject.gameObject.SetActive(false);
         textObject.GetComponent<TextMesh>().text = WizardText1;
         textObject.gameObject.SetActive(true);
@@ -82,7 +83,7 @@ public class WizardLogicScript : MonoBehaviour
         textObject.gameObject.SetActive(false);
         isTalking = false;
         sparksEffect.Play();
-        Invoke("callTheCat", 3f);
+        Invoke("callTheCat", 2f);
     }
 
     void hideText2()
@@ -97,5 +98,6 @@ public class WizardLogicScript : MonoBehaviour
         catObject.GetComponent<WalkAutomatically>().enabled = true;
         gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 30f, 0f);
         GlobalVariablesPlocekTask.catAppeared = true;
+        GlobalVariables.heroCanMove = true;
     }
 }
