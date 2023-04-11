@@ -23,6 +23,7 @@ public class TextFoosballOponent : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            other.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             GlobalVariables.heroCanMove = false;
             if (best == 0)
             {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class KamilaTalking : MonoBehaviour
 {
@@ -8,9 +9,12 @@ public class KamilaTalking : MonoBehaviour
     [SerializeField][TextArea] string noFoosballWon;
     [SerializeField][TextArea] string noCupBrought;
     [SerializeField][TextArea] string allDone;
+    Light2D myLight;
     void Start()
     {
         textObject = gameObject.transform.Find("KamilaText");
+        myLight = gameObject.transform.Find("myLight").GetComponent<Light2D>();
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -19,7 +23,6 @@ public class KamilaTalking : MonoBehaviour
         {
             textObject.gameObject.SetActive(false);
             bool foosballWon = PlayerPrefs.HasKey("won");
-
             if (!foosballWon)
             {
                 textObject.GetComponent<TextMesh>().text = noFoosballWon;
@@ -32,7 +35,8 @@ public class KamilaTalking : MonoBehaviour
             {
                 GlobalVariables.heroCanMove = false;
                 textObject.GetComponent<TextMesh>().text = allDone;
-                StartCoroutine(FadeHero(other.gameObject));
+                Invoke("runFadeEffect", 2f);
+                Invoke("goToSweden", 4f);
             }
             textObject.gameObject.SetActive(true);
         }
@@ -45,16 +49,24 @@ public class KamilaTalking : MonoBehaviour
         }
     }
 
-
-    IEnumerator FadeHero(GameObject hero)
+    void runFadeEffect()
     {
-        Renderer renderer = hero.GetComponent<Renderer>();
-        Color c = renderer.material.color;
-        for (float alpha = 1f; alpha >= 0; alpha -= 0.1f)
+        StartCoroutine(FadeHero());
+    }
+
+    IEnumerator FadeHero()
+    {
+        float i = myLight.intensity;
+        for (float intensity = 1f; intensity <= 12; intensity += 0.2f)
         {
-            c.a = alpha;
-            renderer.material.color = c;
-            yield return new WaitForSeconds(.25f);
+            i = intensity;
+            myLight.intensity = i;
+            yield return new WaitForSeconds(.01f);
         }
+    }
+
+    void goToSweden()
+    {
+        Initiate.Fade("Level0", Color.black, 1f);
     }
 }
