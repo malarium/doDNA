@@ -13,6 +13,7 @@ public class HeroMovementPlatform : MonoBehaviour
     Animator heroAnimator;
     BoxCollider2D heroFeetCollider;
 
+
     void Start()
     {
         GlobalVariables.heroCanMove = true;
@@ -33,14 +34,13 @@ public class HeroMovementPlatform : MonoBehaviour
     }
     void Run()
     {
-        if (heroFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
-        {
+        // if (heroFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        // {
 
-            heroAnimator.SetBool("isRunning", Mathf.Abs(heroRigidBody.velocity.x) > Mathf.Epsilon);
-
-            Vector2 playerValocity = new Vector2(moveInput.x * velocityMultiplier, heroRigidBody.velocity.y);
-            heroRigidBody.velocity = playerValocity;
-        }
+        heroAnimator.SetBool("isRunning", Mathf.Abs(heroRigidBody.velocity.x) > Mathf.Epsilon);
+        Vector2 playerValocity = new Vector2(moveInput.x * velocityMultiplier, heroRigidBody.velocity.y);
+        heroRigidBody.velocity = playerValocity;
+        // }
     }
     void FlipSprite()
     {
@@ -55,7 +55,8 @@ public class HeroMovementPlatform : MonoBehaviour
     {
         if (value.isPressed && (heroFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))))
         {
-            heroRigidBody.velocity += new Vector2(0f, jumpHeight);
+
+            heroRigidBody.velocity += new Vector2(heroRigidBody.velocity.x * velocityMultiplier, jumpHeight);
         }
     }
 
