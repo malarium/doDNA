@@ -73,7 +73,7 @@ public class KamilaTalking : MonoBehaviour
     }
     void goToSweden()
     {
-        Initiate.Fade("Level0", Color.black, 1f);
+        Initiate.Fade("Level3", Color.black, 1f);
     }
     void stopOla()
     {
