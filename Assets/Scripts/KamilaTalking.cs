@@ -6,6 +6,8 @@ using UnityEngine.Rendering.Universal;
 public class KamilaTalking : MonoBehaviour
 {
     Component textObject;
+    GameObject ola;
+    WalkAutomatically olaWalkScript;
     [SerializeField][TextArea] string noFoosballWon;
     [SerializeField][TextArea] string noCupBrought;
     [SerializeField][TextArea] string allDone;
@@ -13,27 +15,31 @@ public class KamilaTalking : MonoBehaviour
     void Start()
     {
         textObject = gameObject.transform.Find("KamilaText");
+        ola = GameObject.Find("Ola");
+        olaWalkScript = ola.GetComponent<WalkAutomatically>();
         myLight = gameObject.transform.Find("myLight").GetComponent<Light2D>();
-
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
+            GlobalVariables.heroCanMove = false;
+            stopOla();
             textObject.gameObject.SetActive(false);
             bool foosballWon = PlayerPrefs.HasKey("won");
             if (!foosballWon)
             {
                 textObject.GetComponent<TextMesh>().text = noFoosballWon;
+                GlobalVariables.heroCanMove = true;
             }
             else if (!GlobalVariablesKitchen.kitchenQuestFinished)
             {
                 textObject.GetComponent<TextMesh>().text = noCupBrought;
+                GlobalVariables.heroCanMove = true;
             }
             else
             {
-                GlobalVariables.heroCanMove = false;
                 textObject.GetComponent<TextMesh>().text = allDone;
                 Invoke("runFadeEffect", 2f);
                 Invoke("goToSweden", 4f);
@@ -46,6 +52,7 @@ public class KamilaTalking : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             textObject.gameObject.SetActive(false);
+            olaWalkScript.enabled = true;
         }
     }
 
@@ -64,9 +71,13 @@ public class KamilaTalking : MonoBehaviour
             yield return new WaitForSeconds(.01f);
         }
     }
-
     void goToSweden()
     {
         Initiate.Fade("Level0", Color.black, 1f);
+    }
+    void stopOla()
+    {
+        olaWalkScript.enabled = false;
+        ola.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
     }
 }

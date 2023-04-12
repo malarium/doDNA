@@ -32,7 +32,6 @@ public class GuyInKitchenLogic : MonoBehaviour
                 GlobalVariablesKitchen.kitchenQuestFinished = true;
                 if (GlobalVariables.takenItem == "Cup")
                 {
-
                     GlobalVariables.DropObject(new Vector2(0f, 0f));
                     Destroy(GlobalVariables.takenObject);
                 }

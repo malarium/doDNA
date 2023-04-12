@@ -15,6 +15,7 @@ public class HeroMovement : MonoBehaviour
 
     void Start()
     {
+        // PlayerPrefs.SetString("takenItem", "");
         GlobalVariables.currentItem = "";
         GlobalVariables.takenItem = "";
         GlobalVariables.heroCanMove = true;

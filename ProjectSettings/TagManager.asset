@@ -85,3 +85,6 @@ TagManager:
   - name: CoversHero
     uniqueID: 2467975287
     locked: 0
+  - name: TextOnTop
+    uniqueID: 1511898131
+    locked: 0

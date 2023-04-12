@@ -35,7 +35,11 @@ public static class GlobalVariables
     {
         GlobalVariables.takenItem = GlobalVariables.currentItem;
         GlobalVariables.takenObject = GameObject.FindGameObjectWithTag(GlobalVariables.takenItem);
-        GlobalVariables.takenObjectRenderer = GlobalVariables.takenObject.GetComponent<SpriteRenderer>();
+        if (GlobalVariables.takenObject != null)
+        {
+
+            GlobalVariables.takenObjectRenderer = GlobalVariables.takenObject.GetComponent<SpriteRenderer>();
+        }
         PlayerPrefs.SetString("takenItem", GlobalVariables.takenItem);
         if (GlobalVariables.takenObject.GetComponent<WalkAutomatically>() != null)
         {
