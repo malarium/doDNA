@@ -36,6 +36,7 @@ TagManager:
   - turtle
   - flowerpot
   - flowerpot2
+  - platform
   layers:
   - Default
   - TransparentFX

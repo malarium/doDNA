@@ -30,6 +30,7 @@ public class HeroMovementPlatform : MonoBehaviour
     }
     void OnMove(InputValue value)
     {
+        if (!GlobalVariables.heroCanMove) { return; }
         moveInput = value.Get<Vector2>();
     }
     void Run()
@@ -53,6 +54,7 @@ public class HeroMovementPlatform : MonoBehaviour
 
     void OnTake(InputValue value)
     {
+        if (!GlobalVariables.heroCanMove) { return; }
         if (value.isPressed && (heroFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))))
         {
 
