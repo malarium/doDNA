@@ -13,6 +13,7 @@ public static class GlobalVariables
 
     public static Rigidbody2D takenObjectBody;
     public static SpriteRenderer takenObjectRenderer;
+    public static bool platformLevelStarted = true;
     public static bool heroCanMove = true;
 
     public static void DropObject(Vector2 coords)

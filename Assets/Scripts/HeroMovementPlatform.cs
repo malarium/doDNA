@@ -12,14 +12,20 @@ public class HeroMovementPlatform : MonoBehaviour
     Vector2 moveInput;
     Animator heroAnimator;
     BoxCollider2D heroFeetCollider;
+    CapsuleCollider2D heroGeneralCollider;
+    Component heroText;
+    Component deathSound;
 
 
     void Start()
     {
         GlobalVariables.heroCanMove = true;
         heroFeetCollider = gameObject.GetComponent<BoxCollider2D>();
+        heroGeneralCollider = gameObject.GetComponent<CapsuleCollider2D>();
         heroRigidBody = gameObject.GetComponent<Rigidbody2D>();
         heroAnimator = gameObject.GetComponent<Animator>();
+        heroText = gameObject.transform.Find("Text");
+        deathSound = gameObject.transform.Find("DeathSound");
         Cursor.visible = false;
     }
 
@@ -35,13 +41,9 @@ public class HeroMovementPlatform : MonoBehaviour
     }
     void Run()
     {
-        // if (heroFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
-        // {
-
         heroAnimator.SetBool("isRunning", Mathf.Abs(heroRigidBody.velocity.x) > Mathf.Epsilon);
         Vector2 playerValocity = new Vector2(moveInput.x * velocityMultiplier, heroRigidBody.velocity.y);
         heroRigidBody.velocity = playerValocity;
-        // }
     }
     void FlipSprite()
     {
@@ -55,20 +57,35 @@ public class HeroMovementPlatform : MonoBehaviour
     void OnTake(InputValue value)
     {
         if (!GlobalVariables.heroCanMove) { return; }
+        if (heroGeneralCollider.IsTouchingLayers(LayerMask.GetMask("Board")))
+        {
+            heroText.GetComponent<TextMesh>().text = "Looking for a Witcher?";
+            heroText.gameObject.SetActive(true);
+            Invoke("hideHeroText", 3f);
+            return;
+        }
         if (value.isPressed && (heroFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))))
         {
-
             heroRigidBody.velocity += new Vector2(heroRigidBody.velocity.x * velocityMultiplier, jumpHeight);
         }
     }
-
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Tag: " + other.tag);
+        if (other.gameObject.tag == "Enemy")
+        {
+            deathSound.GetComponent<AudioSource>().Play();
+            Destroy(gameObject.GetComponent<CapsuleCollider2D>());
+            Destroy(gameObject.GetComponent<BoxCollider2D>());
+            Invoke("reloadLevel", 2.8f);
+        }
     }
-    void OnTriggerExit2D(Collider2D other)
+    void hideHeroText()
     {
-        Debug.Log("Dropped: " + other.tag);
+        heroText.gameObject.SetActive(false);
+    }
+    void reloadLevel()
+    {
+        Initiate.Fade("Level3", Color.black, 2f);
     }
 }
 

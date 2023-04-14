@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class InitialTalkLogic : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class InitialTalkLogic : MonoBehaviour
     Component heroText;
     Component MikkeText;
     AudioSource audioSource;
+    CinemachineVirtualCamera vcam;
+
+
 
     GameObject backgroundAmbient;
     [SerializeField][TextArea] string mikkeText1;
@@ -23,15 +27,24 @@ public class InitialTalkLogic : MonoBehaviour
         heroAnimator = GetComponent<Animator>();
         Mikke = GameObject.Find("Mikke");
         bolt = GameObject.Find("Bolt");
+        vcam = GameObject.Find("Regular Camera").gameObject.GetComponent<CinemachineVirtualCamera>();
         backgroundAmbient = GameObject.Find("BackgroundAmbient");
         MikkeText = Mikke.gameObject.transform.Find("MikkeText");
         Mikke.gameObject.SetActive(false);
         bolt.gameObject.SetActive(false);
         heroText = gameObject.transform.Find("Text");
         hideHeroText();
-        Invoke("Speak0", 3f);
         GlobalVariables.heroCanMove = false;
         audioSource = GetComponent<AudioSource>();
+        if (GlobalVariables.platformLevelStarted)
+        {
+            FinishIt();
+            backgroundAmbient.gameObject.GetComponent<AudioSource>().Play();
+        }
+        else
+        {
+            Invoke("Speak0", 3f);
+        }
     }
 
     void Speak0()
@@ -67,19 +80,19 @@ public class InitialTalkLogic : MonoBehaviour
     {
         MikkeText.GetComponent<TextMesh>().text = mikkeText1;
         Mikke.gameObject.SetActive(true);
-        Invoke("Speak6", 3f);
+        Invoke("Speak6", 6f);
     }
 
     void Speak6()
     {
         hideMikkeText();
-        Invoke("Speak7", 2f);
+        Invoke("Speak7", 1f);
     }
     void Speak7()
     {
         MikkeText.GetComponent<TextMesh>().text = mikkeText2;
         showMikkeText();
-        Invoke("Speak8", 3f);
+        Invoke("Speak8", 4f);
     }
 
     void Speak8()
@@ -103,7 +116,7 @@ public class InitialTalkLogic : MonoBehaviour
         backgroundAmbient.gameObject.GetComponent<AudioSource>().Play();
         bolt.gameObject.SetActive(true);
         Invoke("stopBolt", 1f);
-        Invoke("Speak11", 4f);
+        Invoke("Speak11", 7f);
     }
 
     void stopBolt()
@@ -114,13 +127,13 @@ public class InitialTalkLogic : MonoBehaviour
     void Speak11()
     {
         hideMikkeText();
-        Invoke("Speak12", 3f);
+        Invoke("Speak12", 4f);
     }
     void Speak12()
     {
         MikkeText.GetComponent<TextMesh>().text = mikkeText4;
         showMikkeText();
-        Invoke("Speak13", 4f);
+        Invoke("Speak13", 5f);
     }
 
     void Speak13()
@@ -133,16 +146,18 @@ public class InitialTalkLogic : MonoBehaviour
     {
         Mikke.gameObject.transform.localScale = new Vector3(-1f, 1f, 1f);
         Rigidbody2D mikkeBody = Mikke.gameObject.GetComponent<Rigidbody2D>();
-
+        GlobalVariables.platformLevelStarted = true;
         mikkeBody.velocity = new Vector2(1f, 0.7f);
-
         Invoke("FinishIt", 5f);
     }
 
     void FinishIt()
     {
         Mikke.gameObject.SetActive(false);
+        vcam.m_Lens.OrthographicSize = 5;
+        heroAnimator.SetBool("isZoomed", false);
         GlobalVariables.heroCanMove = true;
+        heroText.GetComponent<TextMesh>().fontSize = 500;
     }
 
     void showHeroText()
