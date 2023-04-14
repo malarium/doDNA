@@ -37,6 +37,8 @@ TagManager:
   - flowerpot
   - flowerpot2
   - platform
+  - Ground
+  - Enemy
   layers:
   - Default
   - TransparentFX
