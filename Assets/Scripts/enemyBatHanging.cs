@@ -16,7 +16,7 @@ public class enemyBatHanging : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            batBody.gravityScale = 2f;
+            batBody.gravityScale = 3f;
             Invoke("Disappear", 3f);
         }
     }

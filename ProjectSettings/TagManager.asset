@@ -39,6 +39,10 @@ TagManager:
   - platform
   - Ground
   - Enemy
+  - GravityLight
+  - GravityNormal
+  - NoJump
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

@@ -13,8 +13,13 @@ public static class GlobalVariables
 
     public static Rigidbody2D takenObjectBody;
     public static SpriteRenderer takenObjectRenderer;
-    public static bool platformLevelStarted = true;
+    public static bool platformLevelStarted = false;
     public static bool heroCanMove = true;
+
+    public static Vector3 platformerStartingPoint = new Vector3(1.3f, 1.67f, 0);
+    // public static Vector3 platformerStartingPoint = new Vector3(107.3f, -35f, 0);
+    // public static Vector3 platformerStartingPoint = new Vector3(82f, -4f, 0);
+    // public static Vector3 platformerStartingPoint = new Vector3(154.5f, -33f, 0);
 
     public static void DropObject(Vector2 coords)
     {
