@@ -43,6 +43,7 @@ TagManager:
   - GravityNormal
   - NoJump
   - Checkpoint
+  - bottleGlow
   layers:
   - Default
   - TransparentFX

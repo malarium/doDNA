@@ -19,7 +19,7 @@ public static class GlobalVariables
     public static Vector3 platformerStartingPoint = new Vector3(1.3f, 1.67f, 0);
     // public static Vector3 platformerStartingPoint = new Vector3(107.3f, -35f, 0);
     // public static Vector3 platformerStartingPoint = new Vector3(82f, -4f, 0);
-    // public static Vector3 platformerStartingPoint = new Vector3(154.5f, -33f, 0);
+    // public static Vector3 platformerStartingPoint = new Vector3(396.04f, -36.34f, 0);
 
     public static void DropObject(Vector2 coords)
     {

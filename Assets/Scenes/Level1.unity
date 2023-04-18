@@ -2381,7 +2381,7 @@ MonoBehaviour:
     Ha ha ha!'
   WizardText3: 'Here!
 
-    Take it!'
+    Take it to that crybaby!'
   sparksEffect: {fileID: 2129165532}
 --- !u!1 &194409613
 GameObject:
@@ -2881,7 +2881,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 224344932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.2, y: -0.9299999, z: -10}
+  m_LocalPosition: {x: -0.050000023, y: 44.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5577,7 +5577,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.426423, y: -0.93196636, z: -10}
+  m_LocalPosition: {x: -0.049681496, y: 44.44143, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7084,7 +7084,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675927787}
-  m_Text: TEST
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: 0.015
   m_LineSpacing: 1
@@ -8065,6 +8065,7 @@ GameObject:
   - component: {fileID: 815504221}
   - component: {fileID: 815504220}
   - component: {fileID: 815504219}
+  - component: {fileID: 815504226}
   m_Layer: 0
   m_Name: RandomDNAer (15)
   m_TagString: Untagged
@@ -8236,6 +8237,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &815504226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815504218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9839e3871199d424dade97d31034d33c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCtext: 'Plocek keeps chocolate
+
+    in his desk.'
 --- !u!1 &817541480
 GameObject:
   m_ObjectHideFlags: 0
@@ -73304,6 +73320,7 @@ GameObject:
   - component: {fileID: 1751435634}
   - component: {fileID: 1751435633}
   - component: {fileID: 1751435632}
+  - component: {fileID: 1751435639}
   m_Layer: 0
   m_Name: RandomDNAer (5)
   m_TagString: Untagged
@@ -73475,6 +73492,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1751435639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751435631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9839e3871199d424dade97d31034d33c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCtext: 'Kamila can get you a laptop.
+
+    But only Ola can summon Kamila.'
 --- !u!1001 &1770146688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74458,7 +74490,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1813474775}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.7, y: -23.9, z: -0.5297632}
+  m_LocalPosition: {x: 18.1, y: -24.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -93642,11 +93674,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9174719221712567872, guid: ae87dd96d7e35fa42be158e2c873b2f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.3
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 9174719221712567872, guid: ae87dd96d7e35fa42be158e2c873b2f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.83
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 9174719221712567872, guid: ae87dd96d7e35fa42be158e2c873b2f6, type: 3}
       propertyPath: m_LocalPosition.z

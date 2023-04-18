@@ -96,7 +96,7 @@ public class WizardLogicScript : MonoBehaviour
         catObject.GetComponent<Renderer>().enabled = true;
         catObject.GetComponent<CapsuleCollider2D>().enabled = true;
         catObject.GetComponent<WalkAutomatically>().enabled = true;
-        gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 30f, 0f);
+        gameObject.transform.position = new Vector3(-16f, -55f, 0f);
         GlobalVariablesPlocekTask.catAppeared = true;
         GlobalVariables.heroCanMove = true;
     }
