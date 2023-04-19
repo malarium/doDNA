@@ -80,7 +80,7 @@ public class InitialTalkLogic : MonoBehaviour
     {
         MikkeText.GetComponent<TextMesh>().text = mikkeText1;
         Mikke.gameObject.SetActive(true);
-        Invoke("Speak6", 6f);
+        Invoke("Speak6", 7f);
     }
 
     void Speak6()
@@ -92,7 +92,7 @@ public class InitialTalkLogic : MonoBehaviour
     {
         MikkeText.GetComponent<TextMesh>().text = mikkeText2;
         showMikkeText();
-        Invoke("Speak8", 4f);
+        Invoke("Speak8", 5f);
     }
 
     void Speak8()
@@ -116,7 +116,7 @@ public class InitialTalkLogic : MonoBehaviour
         backgroundAmbient.gameObject.GetComponent<AudioSource>().Play();
         bolt.gameObject.SetActive(true);
         Invoke("stopBolt", 1f);
-        Invoke("Speak11", 7f);
+        Invoke("Speak11", 8f);
     }
 
     void stopBolt()
@@ -133,7 +133,7 @@ public class InitialTalkLogic : MonoBehaviour
     {
         MikkeText.GetComponent<TextMesh>().text = mikkeText4;
         showMikkeText();
-        Invoke("Speak13", 5f);
+        Invoke("Speak13", 7f);
     }
 
     void Speak13()

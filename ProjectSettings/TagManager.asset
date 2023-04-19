@@ -44,6 +44,7 @@ TagManager:
   - NoJump
   - Checkpoint
   - bottleGlow
+  - Can_spill
   layers:
   - Default
   - TransparentFX

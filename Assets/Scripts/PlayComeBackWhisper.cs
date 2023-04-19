@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayComeBackWhisper : MonoBehaviour
 {
     AudioSource sound;
+    bool playedAlready = false;
     void Start()
     {
         sound = gameObject.GetComponent<AudioSource>();
@@ -12,9 +13,10 @@ public class PlayComeBackWhisper : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && !playedAlready)
         {
             sound.Play();
+            playedAlready = true;
         }
     }
 }

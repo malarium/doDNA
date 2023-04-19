@@ -120,13 +120,15 @@ public class FinalScript : MonoBehaviour
     }
     void Speak10()
     {
+        mikkeText.GetComponent<TextMesh>().fontSize = 500;
         mikkeText.GetComponent<TextMesh>().text = mikkeText6;
         showMikkeText();
-        Invoke("hideMikkeText", 3f);
-        Invoke("Speak11", 4f);
+        Invoke("hideMikkeText", 4f);
+        Invoke("Speak11", 5f);
     }
     void Speak11()
     {
+        mikkeText.GetComponent<TextMesh>().fontSize = 260;
         mikkeText.GetComponent<TextMesh>().text = mikkeText7;
         showMikkeText();
         Invoke("hideMikkeText", 6f);
