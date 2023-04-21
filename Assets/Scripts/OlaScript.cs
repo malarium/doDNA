@@ -39,6 +39,7 @@ public class OlaScript : MonoBehaviour
             {
                 textObject.GetComponent<TextMesh>().text = GotChocolate;
                 Destroy(GlobalVariables.takenObject);
+                GlobalVariables.DropObject(Vector2.zero);
                 Invoke("showKamila", 3f);
             }
             else

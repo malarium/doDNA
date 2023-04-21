@@ -986,6 +986,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: 4272c83271471ef459e57f2eb15f3c37, type: 3}
     - target: {fileID: 8737768591099134001, guid: 1c4d9d47e157fae42804208057c17da7, type: 3}
+      propertyPath: m_Text
+      value: Let's play!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737768591099134001, guid: 1c4d9d47e157fae42804208057c17da7, type: 3}
       propertyPath: m_Anchor
       value: 4
       objectReference: {fileID: 0}
@@ -3001,7 +3005,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 224344932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.050000023, y: 44.9, z: -10}
+  m_LocalPosition: {x: 17.359999, y: 0.010000095, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5721,7 +5725,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.049681496, y: 44.44143, z: -10}
+  m_LocalPosition: {x: 8.429247, y: 0.006330356, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13866,12 +13870,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e78958adfc433a4d8e9e51c7a5e66bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPCtextFirstGame: 'Let''s play!
+  NPCtextFirstGame: 'Proove you''re worthy of a laptop!
 
-    Score at least 2 goals to win!
-
-    Don''t
-    get beaten!'
+    Beat me!'
   NPCtextAnotherGame: '
 
     Let''s see if you can
@@ -19232,7 +19233,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 86
   m_Sprite: {fileID: 1783339151, guid: e87394e0407c19d40b7a4554d9969530, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -21006,7 +21007,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.639
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.18
+  m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: fd1274bc
@@ -94048,11 +94049,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9174719221712567872, guid: ae87dd96d7e35fa42be158e2c873b2f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.05
+      value: 17.46
       objectReference: {fileID: 0}
     - target: {fileID: 9174719221712567872, guid: ae87dd96d7e35fa42be158e2c873b2f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 45
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 9174719221712567872, guid: ae87dd96d7e35fa42be158e2c873b2f6, type: 3}
       propertyPath: m_LocalPosition.z

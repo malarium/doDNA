@@ -9,7 +9,7 @@ public class PointsLogic : MonoBehaviour
     public static int PlayerPoints = 0;
 
     public static float timeRemaining = 20;
-    [SerializeField] int goalsToScore = 2;
+    // [SerializeField] int goalsToScore = 2;
     float totalTime;
     Component textObjectPoints;
     Component timer;
@@ -42,10 +42,14 @@ public class PointsLogic : MonoBehaviour
         }
         else
         {
-            if (PlayerPoints > EnemyPoints && PlayerPoints >= goalsToScore)
+            if (PlayerPoints > EnemyPoints)
             {
                 initialAndFinalText.gameObject.GetComponent<TextMesh>().text = "YOU WIN!";
                 PlayerPrefs.SetString("won", "true");
+            }
+            else if (PlayerPoints == EnemyPoints)
+            {
+                initialAndFinalText.gameObject.GetComponent<TextMesh>().text = "IT'S A TIE!";
             }
             else
             {
