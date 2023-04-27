@@ -40,6 +40,7 @@ public class IntroLogic : MonoBehaviour
         }
         else if (gameObject.name == "BtnPlay")
         {
+            GlobalVariables.resetGame();
             Initiate.Fade("Level1", Color.black, 1f);
         }
     }

@@ -53,6 +53,25 @@ public static class GlobalVariables
         }
         GlobalVariables.takenObject.SetActive(false);
     }
+
+    public static void resetGame()
+    {
+        GlobalVariables.platformerStartingPoint = new Vector3(1.3f, 1.67f, 0);
+        GlobalVariablesKitchen.kitchenQuestStarted = false;
+        GlobalVariablesKitchen.kitchenQuestFinished = false;
+        GlobalVariablesPlocekTask.doorOpened = false;
+        GlobalVariablesPlocekTask.toiletPaperQuestStarted = false;
+        GlobalVariablesPlocekTask.toiletPaperQuestFinished = false;
+        GlobalVariablesPlocekTask.wizardVisible = false;
+        GlobalVariablesPlocekTask.catAppeared = false;
+        GlobalVariablesPlocekTask.catMissionComplete = false;
+        GlobalVariablesPlocekTask.plocekDoorOpened = false;
+        GlobalVariablesPlocekTask.initiallyApproachedByPlayer = false;
+        GlobalOlaTask.chocolateAppeared = false;
+        GlobalOlaTask.vacuumTaskStarted = false;
+        GlobalOlaTask.vacuumTaskCompleted = false;
+        GlobalOlaTask.kamilaVisible = false;
+    }
 }
 
 public static class GlobalVariablesKitchen
@@ -80,3 +99,4 @@ public static class GlobalOlaTask
     public static bool vacuumTaskCompleted = false;
     public static bool kamilaVisible = false;
 }
+
