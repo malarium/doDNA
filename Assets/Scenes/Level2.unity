@@ -1405,7 +1405,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 303af6512202f0949b678396241237fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goalsToScore: 2
 --- !u!4 &592582332
 Transform:
   m_ObjectHideFlags: 0
@@ -2432,7 +2431,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &1605978396
 CircleCollider2D:

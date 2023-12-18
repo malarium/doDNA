@@ -1003,7 +1003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8737768591099134001, guid: 1c4d9d47e157fae42804208057c17da7, type: 3}
       propertyPath: m_Color.rgba
-      value: 4292993506
+      value: 4278190080
       objectReference: {fileID: 0}
     - target: {fileID: 8737768591099134001, guid: 1c4d9d47e157fae42804208057c17da7, type: 3}
       propertyPath: m_CharacterSize
@@ -2072,7 +2072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8737768591099134001, guid: 1c4d9d47e157fae42804208057c17da7, type: 3}
       propertyPath: m_Color.rgba
-      value: 4292993506
+      value: 4278387504
       objectReference: {fileID: 0}
     - target: {fileID: 8737768591099134001, guid: 1c4d9d47e157fae42804208057c17da7, type: 3}
       propertyPath: m_CharacterSize
@@ -2209,7 +2209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8737768591099134001, guid: 1c4d9d47e157fae42804208057c17da7, type: 3}
       propertyPath: m_Color.rgba
-      value: 4292993506
+      value: 4278650667
       objectReference: {fileID: 0}
     - target: {fileID: 8737768591099134001, guid: 1c4d9d47e157fae42804208057c17da7, type: 3}
       propertyPath: m_CharacterSize
@@ -2920,7 +2920,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 4272c83271471ef459e57f2eb15f3c37, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4292993506
+    rgba: 4278190080
 --- !u!23 &216240514
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3477,7 +3477,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 4272c83271471ef459e57f2eb15f3c37, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4292993506
+    rgba: 4278190080
 --- !u!23 &307422527
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6769,9 +6769,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deskText1: 'A, you heard me!
 
-    Jolly good!'
-  deskText2: "Yes, I can get you \nsome chotolatey comestibles.\nBut, blimey,  I
-    feel a bit dirty, so..."
+    Jolly good!
+
+    I''m Plocek''s desk!'
+  deskText2: 'I can get you some chotolate.
+
+    But, blimey,  I feel a bit dirty,
+    so...'
   deskText3: "... I need a vacuum cleaner!\nGet me one and you'll get \nyour chocolate"
 --- !u!1 &615508583
 GameObject:
@@ -6825,7 +6829,7 @@ TextMesh:
   m_FontSize: 500
   m_FontStyle: 1
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: a51ec10f280aeef48b7e14af8c272ddc, type: 3}
+  m_Font: {fileID: 12800000, guid: 4272c83271471ef459e57f2eb15f3c37, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4292006619
@@ -6849,7 +6853,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a51ec10f280aeef48b7e14af8c272ddc, type: 3}
+  - {fileID: 2100000, guid: 4272c83271471ef459e57f2eb15f3c37, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7551,7 +7555,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 4272c83271471ef459e57f2eb15f3c37, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4292993506
+    rgba: 4278190080
 --- !u!23 &686350202
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8430,6 +8434,7 @@ GameObject:
   - component: {fileID: 799440420}
   - component: {fileID: 799440422}
   - component: {fileID: 799440421}
+  - component: {fileID: 799440423}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -8516,6 +8521,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!210 &799440423
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799440419}
+  m_Enabled: 1
+  m_SortingLayerID: 1511898131
+  m_SortingLayer: 5
+  m_SortingOrder: 0
 --- !u!4 &812697490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8737768591790778422, guid: 1c4d9d47e157fae42804208057c17da7, type: 3}
@@ -9066,7 +9082,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 4272c83271471ef459e57f2eb15f3c37, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4292993506
+    rgba: 4278190080
 --- !u!23 &837897451
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11690,7 +11706,7 @@ MonoBehaviour:
 
     thou shalt bring
     some offering'
-  GotChocolate: "Alas!. Kamila The Wise \nshall be content."
+  GotChocolate: "Alas! Kamila The Wise \nshall be content."
 --- !u!114 &1006671524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14296,6 +14312,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 485439815}
     m_Modifications:
     - target: {fileID: 8737768591099134001, guid: 1c4d9d47e157fae42804208057c17da7, type: 3}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4272c83271471ef459e57f2eb15f3c37, type: 3}
+    - target: {fileID: 8737768591099134001, guid: 1c4d9d47e157fae42804208057c17da7, type: 3}
       propertyPath: m_Text
       value: I have a key!
       objectReference: {fileID: 0}
@@ -14303,6 +14323,18 @@ PrefabInstance:
       propertyPath: m_Anchor
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8737768591099134001, guid: 1c4d9d47e157fae42804208057c17da7, type: 3}
+      propertyPath: m_FontSize
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737768591099134001, guid: 1c4d9d47e157fae42804208057c17da7, type: 3}
+      propertyPath: m_CharacterSize
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737768591099134002, guid: 1c4d9d47e157fae42804208057c17da7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4272c83271471ef459e57f2eb15f3c37, type: 3}
     - target: {fileID: 8737768591099134006, guid: 1c4d9d47e157fae42804208057c17da7, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -22875,7 +22907,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 4272c83271471ef459e57f2eb15f3c37, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4292993506
+    rgba: 4278650662
 --- !u!23 &1602682903
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -76096,7 +76128,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 4272c83271471ef459e57f2eb15f3c37, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4292993506
+    rgba: 4278190080
 --- !u!23 &1865980527
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -77377,7 +77409,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 4272c83271471ef459e57f2eb15f3c37, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4292993506
+    rgba: 4278190080
 --- !u!23 &2003156674
 MeshRenderer:
   m_ObjectHideFlags: 0
